@@ -1,1 +1,14 @@
 /.metadata/
+Servers/
+sts-bundle/
+apache-tomcat-*/
+*.zip
+target/
+build/
+bin/
+.settings/
+.classpath
+.project
+*.log
+.gradle/
+HELP.md
