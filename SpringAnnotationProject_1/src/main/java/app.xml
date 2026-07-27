@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd">
+	<context:component-scan base-package="com.sist.*"></context:component-scan>
+	<!-- 
+	
+	클래스 메모리 할당 => 클래스 위에
+	@Component : 일반 클래스
+	@Repository : 저장소 => DAO
+	@Service : 기능 처리
+	@Controller : Model => 브라우저와 연동 / 결과값 전송 + 라우터
+	@RestController : JSON 전송하는 클래스 라우터 
+	@ControllerAdvice : 공통 예외처리
+ 	@Configuration : XML 대신 자바로 환경 설정
+ 	
+ 	DI => 메소드 / 멤버변수 / 메소드 매개변수 위에 작ㅈ성
+ 	@Required : 사용자 요청값이 반드시 필요한 경우 
+ 	@Autowired : 스프링에서 자동으로 값 대입해줄 때 (객체 주소) @Qualifier(name="c")
+ 	@PostConstruct : init-method
+ 	@PreDestroy : destroy-method
+ 	@Resource : @Resource(name="b")
+ 	@PersistenceContext 
+ 	@PersistenceUnit
+	
+	Interface A
+	
+	Class B implements A
+	Class C implements A
+	
+	@Autowired
+	@Qulifier(name="b")
+	A a;
+	
+	@Resource(name="c")
+	A a;
+	 -->
+</beans>
