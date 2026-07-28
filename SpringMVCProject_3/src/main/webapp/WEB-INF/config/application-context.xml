@@ -12,6 +12,14 @@
 	
 	<aop:aspectj-autoproxy></aop:aspectj-autoproxy>
 	<context:component-scan base-package="com.sist.*"></context:component-scan>
+	
+	<!--
+	 @RequestMapping, @Controller, @RequestBody, @ResponseBody 등 애노테이션 기반 MVC 기능을 활성화
+	 @ResponseBody / @RestController가 객체를 JSON으로 변환(직렬화) 할 때 필요한 MappingJackson2HttpMessageConverter를 자동 등록
+	 xmlns:mvc="http://www.springframework.org/schema/mvc" << 이게 네임스페이스에 등록이 되어있어야함
+	  -->
+	<mvc:annotation-driven /> 
+	
 	<bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver"
 		p:prefix="/"
 		p:suffix=".jsp"
